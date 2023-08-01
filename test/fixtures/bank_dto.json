@@ -1,0 +1,46 @@
+{
+  "total_pages": 1,
+  "total_records": 24,
+  "next": null,
+  "previous": null,
+  "record_range": [1, 24],
+  "current_page": 1,
+  "records": [
+    {
+      "idx": "UZmPqTDkdhKmukdZe2gVWZ",
+      "name": "Agricultural Development Bank Limited",
+      "short_name": "ADBL",
+      "logo": "https://khalti-static.s3.ap-south-1.amazonaws.com/media/bank-logo/adbl.png",
+      "swift_code": "ADBLNPKA",
+      "has_cardpayment": false,
+      "address": "Singhadurbar, Kathmandu",
+      "ebanking_url": "",
+      "has_ebanking": true,
+      "has_mobile_checkout": true,
+      "has_direct_withdraw": true,
+      "has_nchl": false,
+      "has_mobile_banking": false,
+      "play_store": "",
+      "app_store": "",
+      "branches": []
+    },
+    {
+      "idx": "pxYLCnYAPu3Zdq9ce83fsP",
+      "name": "Best Finance Company Ltd",
+      "short_name": "Best  Finance",
+      "logo": "https://khalti-static.s3.ap-south-1.amazonaws.com/media/bank-logo/best-finance.png",
+      "swift_code": "BESTFINSWIFT-NPS",
+      "has_cardpayment": false,
+      "address": "Kamladi, Kathmandu",
+      "ebanking_url": "",
+      "has_ebanking": false,
+      "has_mobile_checkout": true,
+      "has_direct_withdraw": false,
+      "has_nchl": false,
+      "has_mobile_banking": false,
+      "play_store": "",
+      "app_store": "",
+      "branches": []
+    }
+  ]
+}

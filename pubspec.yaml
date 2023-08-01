@@ -21,6 +21,7 @@ dependencies:
   intl: ^0.18.0
   json_annotation: ^4.8.1
   pigeon: ^10.1.4
+  hydrated_bloc: ^9.1.2
 
 dev_dependencies:
   bloc_test: ^9.1.2

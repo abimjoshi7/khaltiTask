@@ -1,0 +1,18 @@
+{
+  "idx": "UZmPqTDkdhKmukdZe2gVWZ",
+  "name": "Agricultural Development Bank Limited",
+  "short_name": "ADBL",
+  "logo": "https://khalti-static.s3.ap-south-1.amazonaws.com/media/bank-logo/adbl.png",
+  "swift_code": "ADBLNPKA",
+  "has_cardpayment": false,
+  "address": "Singhadurbar, Kathmandu",
+  "ebanking_url": "",
+  "has_ebanking": true,
+  "has_mobile_checkout": true,
+  "has_direct_withdraw": true,
+  "has_nchl": false,
+  "has_mobile_banking": false,
+  "play_store": "",
+  "app_store": "",
+  "branches": []
+}
