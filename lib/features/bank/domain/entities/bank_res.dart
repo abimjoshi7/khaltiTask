@@ -1,27 +1,23 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'bank_dto.freezed.dart';
-part 'bank_dto.g.dart';
+part 'bank_res.freezed.dart';
 
 @freezed
-class BankDto with _$BankDto {
-  const factory BankDto({
+class BankRes with _$BankRes {
+  const factory BankRes({
     @JsonKey(name: 'total_pages') int? totalPages,
     @JsonKey(name: 'total_records') int? totalRecords,
     @JsonKey(name: 'next') String? next,
     @JsonKey(name: 'previous') String? previous,
     @JsonKey(name: 'record_range') List<int>? recordRange,
     @JsonKey(name: 'current_page') int? currentPage,
-    @JsonKey(name: 'records') List<Record>? records,
-  }) = _BankDto;
-
-  factory BankDto.fromJson(Map<String, dynamic> json) =>
-      _$BankDtoFromJson(json);
+    @JsonKey(name: 'records') List<Records>? records,
+  }) = _BankRes;
 }
 
 @freezed
-class Record with _$Record {
-  const factory Record({
+class Records with _$Records {
+  const factory Records({
     @JsonKey(name: 'idx') String? idx,
     @JsonKey(name: 'name') String? name,
     @JsonKey(name: 'short_name') String? shortName,
@@ -38,7 +34,5 @@ class Record with _$Record {
     @JsonKey(name: 'play_store') String? playStore,
     @JsonKey(name: 'app_store') String? appStore,
     @JsonKey(name: 'branches') List<String>? branches,
-  }) = _Record;
-
-  factory Record.fromJson(Map<String, dynamic> json) => _$RecordFromJson(json);
+  }) = _Records;
 }

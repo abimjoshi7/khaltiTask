@@ -1,50 +1,51 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:khaltitask/core/usecases/usecase.dart';
+import 'package:khaltitask/core/error/failures.dart';
 import 'package:khaltitask/features/bank/domain/entities/bank_res.dart';
 import 'package:khaltitask/features/bank/domain/repositories/bank_repository.dart';
-import 'package:khaltitask/features/bank/domain/usecases/get_banks.dart';
+import 'package:khaltitask/features/bank/domain/usecases/get_bank.dart';
 import 'package:mocktail/mocktail.dart';
 
 class MockBankRepository extends Mock implements BankRepository {}
 
 void main() {
-  late GetBanks usecase;
+  late GetBank usecase;
   late MockBankRepository repository;
+  const bankParams = BankParams();
 
   setUp(
     () {
+      // records = Records.fromJson(
+      //   json.decode()
+      // )
       repository = MockBankRepository();
-      usecase = GetBanks(repository: repository);
+      usecase = GetBank(repository);
     },
   );
 
-  const testBankList = BankRes();
+  const testRecord = Records();
 
   test(
-    'should retrieve list of banks with no failures',
+    'should return record from bank list',
     () async {
       // arrange
       when(
-        () => repository.getBanks(),
+        () => repository.getBank(bankParams),
       ).thenAnswer(
-        (_) async => (null, testBankList),
+        (_) async => (
+          NoFailure(),
+          testRecord,
+        ),
       );
 
       // act
       final result = await usecase.call(
-        NoParams(),
+        bankParams,
       );
 
       // assert
-      expect(
-        result,
-        (
-          null,
-          testBankList,
-        ),
-      );
+      expect(result, (NoFailure(), testRecord));
       verify(
-        () => repository.getBanks(),
+        () => repository.getBank(bankParams),
       );
       verifyNoMoreInteractions(repository);
     },

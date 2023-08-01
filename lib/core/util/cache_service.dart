@@ -20,7 +20,7 @@ class CacheServiceImpl extends CacheService {
                   },
                 )
               : (
-                  NullFailure(),
+                  NoFailure(),
                   {
                     'status': 200,
                     'message': 'Goddamn!!',

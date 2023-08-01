@@ -1,26 +1,31 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:equatable/equatable.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
 import 'package:khaltitask/core/error/failures.dart';
 import 'package:khaltitask/core/usecases/usecase.dart';
+import 'package:khaltitask/features/bank/domain/entities/bank_res.dart';
 import 'package:khaltitask/features/bank/domain/repositories/bank_repository.dart';
 
-class GetBank with Usecase<Record, Params> {
+part 'get_bank.freezed.dart';
+part 'get_bank.g.dart';
+
+class GetBank with Usecase<Records, BankParams> {
+  GetBank(this._repository);
+
   final BankRepository _repository;
-  GetBank({
-    required BankRepository repository,
-  }) : _repository = repository;
+
   @override
-  Future<(Failure, Record)> call(Params p) async =>
-      _repository.getBank(p.id).then((value) => (value.$1, value));
+  Future<(Failure?, Records)> call(BankParams p) => _repository.getBank(
+        p,
+      );
 }
 
-class Params extends Equatable {
-  final String id;
-  const Params({
-    required this.id,
-  });
+@freezed
+class BankParams with _$BankParams {
+  const factory BankParams({
+    @Default('1') String id,
+  }) = _BankParams;
 
-  @override
-  List<Object> get props => [id];
+  factory BankParams.fromJson(Map<String, dynamic> json) =>
+      _$BankParamsFromJson(json);
 }

@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'bank_dto.dart';
+part of 'bank_res.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -14,12 +14,8 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
-BankDto _$BankDtoFromJson(Map<String, dynamic> json) {
-  return _BankDto.fromJson(json);
-}
-
 /// @nodoc
-mixin _$BankDto {
+mixin _$BankRes {
   @JsonKey(name: 'total_pages')
   int? get totalPages => throw _privateConstructorUsedError;
   @JsonKey(name: 'total_records')
@@ -33,17 +29,16 @@ mixin _$BankDto {
   @JsonKey(name: 'current_page')
   int? get currentPage => throw _privateConstructorUsedError;
   @JsonKey(name: 'records')
-  List<Record>? get records => throw _privateConstructorUsedError;
+  List<Records>? get records => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $BankDtoCopyWith<BankDto> get copyWith => throw _privateConstructorUsedError;
+  $BankResCopyWith<BankRes> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $BankDtoCopyWith<$Res> {
-  factory $BankDtoCopyWith(BankDto value, $Res Function(BankDto) then) =
-      _$BankDtoCopyWithImpl<$Res, BankDto>;
+abstract class $BankResCopyWith<$Res> {
+  factory $BankResCopyWith(BankRes value, $Res Function(BankRes) then) =
+      _$BankResCopyWithImpl<$Res, BankRes>;
   @useResult
   $Res call(
       {@JsonKey(name: 'total_pages') int? totalPages,
@@ -52,13 +47,13 @@ abstract class $BankDtoCopyWith<$Res> {
       @JsonKey(name: 'previous') String? previous,
       @JsonKey(name: 'record_range') List<int>? recordRange,
       @JsonKey(name: 'current_page') int? currentPage,
-      @JsonKey(name: 'records') List<Record>? records});
+      @JsonKey(name: 'records') List<Records>? records});
 }
 
 /// @nodoc
-class _$BankDtoCopyWithImpl<$Res, $Val extends BankDto>
-    implements $BankDtoCopyWith<$Res> {
-  _$BankDtoCopyWithImpl(this._value, this._then);
+class _$BankResCopyWithImpl<$Res, $Val extends BankRes>
+    implements $BankResCopyWith<$Res> {
+  _$BankResCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -104,16 +99,16 @@ class _$BankDtoCopyWithImpl<$Res, $Val extends BankDto>
       records: freezed == records
           ? _value.records
           : records // ignore: cast_nullable_to_non_nullable
-              as List<Record>?,
+              as List<Records>?,
     ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$_BankDtoCopyWith<$Res> implements $BankDtoCopyWith<$Res> {
-  factory _$$_BankDtoCopyWith(
-          _$_BankDto value, $Res Function(_$_BankDto) then) =
-      __$$_BankDtoCopyWithImpl<$Res>;
+abstract class _$$_BankResCopyWith<$Res> implements $BankResCopyWith<$Res> {
+  factory _$$_BankResCopyWith(
+          _$_BankRes value, $Res Function(_$_BankRes) then) =
+      __$$_BankResCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -123,14 +118,14 @@ abstract class _$$_BankDtoCopyWith<$Res> implements $BankDtoCopyWith<$Res> {
       @JsonKey(name: 'previous') String? previous,
       @JsonKey(name: 'record_range') List<int>? recordRange,
       @JsonKey(name: 'current_page') int? currentPage,
-      @JsonKey(name: 'records') List<Record>? records});
+      @JsonKey(name: 'records') List<Records>? records});
 }
 
 /// @nodoc
-class __$$_BankDtoCopyWithImpl<$Res>
-    extends _$BankDtoCopyWithImpl<$Res, _$_BankDto>
-    implements _$$_BankDtoCopyWith<$Res> {
-  __$$_BankDtoCopyWithImpl(_$_BankDto _value, $Res Function(_$_BankDto) _then)
+class __$$_BankResCopyWithImpl<$Res>
+    extends _$BankResCopyWithImpl<$Res, _$_BankRes>
+    implements _$$_BankResCopyWith<$Res> {
+  __$$_BankResCopyWithImpl(_$_BankRes _value, $Res Function(_$_BankRes) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -144,7 +139,7 @@ class __$$_BankDtoCopyWithImpl<$Res>
     Object? currentPage = freezed,
     Object? records = freezed,
   }) {
-    return _then(_$_BankDto(
+    return _then(_$_BankRes(
       totalPages: freezed == totalPages
           ? _value.totalPages
           : totalPages // ignore: cast_nullable_to_non_nullable
@@ -172,27 +167,24 @@ class __$$_BankDtoCopyWithImpl<$Res>
       records: freezed == records
           ? _value._records
           : records // ignore: cast_nullable_to_non_nullable
-              as List<Record>?,
+              as List<Records>?,
     ));
   }
 }
 
 /// @nodoc
-@JsonSerializable()
-class _$_BankDto implements _BankDto {
-  const _$_BankDto(
+
+class _$_BankRes implements _BankRes {
+  const _$_BankRes(
       {@JsonKey(name: 'total_pages') this.totalPages,
       @JsonKey(name: 'total_records') this.totalRecords,
       @JsonKey(name: 'next') this.next,
       @JsonKey(name: 'previous') this.previous,
       @JsonKey(name: 'record_range') final List<int>? recordRange,
       @JsonKey(name: 'current_page') this.currentPage,
-      @JsonKey(name: 'records') final List<Record>? records})
+      @JsonKey(name: 'records') final List<Records>? records})
       : _recordRange = recordRange,
         _records = records;
-
-  factory _$_BankDto.fromJson(Map<String, dynamic> json) =>
-      _$$_BankDtoFromJson(json);
 
   @override
   @JsonKey(name: 'total_pages')
@@ -220,10 +212,10 @@ class _$_BankDto implements _BankDto {
   @override
   @JsonKey(name: 'current_page')
   final int? currentPage;
-  final List<Record>? _records;
+  final List<Records>? _records;
   @override
   @JsonKey(name: 'records')
-  List<Record>? get records {
+  List<Records>? get records {
     final value = _records;
     if (value == null) return null;
     if (_records is EqualUnmodifiableListView) return _records;
@@ -233,14 +225,14 @@ class _$_BankDto implements _BankDto {
 
   @override
   String toString() {
-    return 'BankDto(totalPages: $totalPages, totalRecords: $totalRecords, next: $next, previous: $previous, recordRange: $recordRange, currentPage: $currentPage, records: $records)';
+    return 'BankRes(totalPages: $totalPages, totalRecords: $totalRecords, next: $next, previous: $previous, recordRange: $recordRange, currentPage: $currentPage, records: $records)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_BankDto &&
+            other is _$_BankRes &&
             (identical(other.totalPages, totalPages) ||
                 other.totalPages == totalPages) &&
             (identical(other.totalRecords, totalRecords) ||
@@ -255,7 +247,6 @@ class _$_BankDto implements _BankDto {
             const DeepCollectionEquality().equals(other._records, _records));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -270,28 +261,19 @@ class _$_BankDto implements _BankDto {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_BankDtoCopyWith<_$_BankDto> get copyWith =>
-      __$$_BankDtoCopyWithImpl<_$_BankDto>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_BankDtoToJson(
-      this,
-    );
-  }
+  _$$_BankResCopyWith<_$_BankRes> get copyWith =>
+      __$$_BankResCopyWithImpl<_$_BankRes>(this, _$identity);
 }
 
-abstract class _BankDto implements BankDto {
-  const factory _BankDto(
+abstract class _BankRes implements BankRes {
+  const factory _BankRes(
       {@JsonKey(name: 'total_pages') final int? totalPages,
       @JsonKey(name: 'total_records') final int? totalRecords,
       @JsonKey(name: 'next') final String? next,
       @JsonKey(name: 'previous') final String? previous,
       @JsonKey(name: 'record_range') final List<int>? recordRange,
       @JsonKey(name: 'current_page') final int? currentPage,
-      @JsonKey(name: 'records') final List<Record>? records}) = _$_BankDto;
-
-  factory _BankDto.fromJson(Map<String, dynamic> json) = _$_BankDto.fromJson;
+      @JsonKey(name: 'records') final List<Records>? records}) = _$_BankRes;
 
   @override
   @JsonKey(name: 'total_pages')
@@ -313,19 +295,15 @@ abstract class _BankDto implements BankDto {
   int? get currentPage;
   @override
   @JsonKey(name: 'records')
-  List<Record>? get records;
+  List<Records>? get records;
   @override
   @JsonKey(ignore: true)
-  _$$_BankDtoCopyWith<_$_BankDto> get copyWith =>
+  _$$_BankResCopyWith<_$_BankRes> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
-Record _$RecordFromJson(Map<String, dynamic> json) {
-  return _Record.fromJson(json);
-}
-
 /// @nodoc
-mixin _$Record {
+mixin _$Records {
   @JsonKey(name: 'idx')
   String? get idx => throw _privateConstructorUsedError;
   @JsonKey(name: 'name')
@@ -359,15 +337,14 @@ mixin _$Record {
   @JsonKey(name: 'branches')
   List<String>? get branches => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $RecordCopyWith<Record> get copyWith => throw _privateConstructorUsedError;
+  $RecordsCopyWith<Records> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $RecordCopyWith<$Res> {
-  factory $RecordCopyWith(Record value, $Res Function(Record) then) =
-      _$RecordCopyWithImpl<$Res, Record>;
+abstract class $RecordsCopyWith<$Res> {
+  factory $RecordsCopyWith(Records value, $Res Function(Records) then) =
+      _$RecordsCopyWithImpl<$Res, Records>;
   @useResult
   $Res call(
       {@JsonKey(name: 'idx') String? idx,
@@ -389,9 +366,9 @@ abstract class $RecordCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$RecordCopyWithImpl<$Res, $Val extends Record>
-    implements $RecordCopyWith<$Res> {
-  _$RecordCopyWithImpl(this._value, this._then);
+class _$RecordsCopyWithImpl<$Res, $Val extends Records>
+    implements $RecordsCopyWith<$Res> {
+  _$RecordsCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
@@ -488,9 +465,10 @@ class _$RecordCopyWithImpl<$Res, $Val extends Record>
 }
 
 /// @nodoc
-abstract class _$$_RecordCopyWith<$Res> implements $RecordCopyWith<$Res> {
-  factory _$$_RecordCopyWith(_$_Record value, $Res Function(_$_Record) then) =
-      __$$_RecordCopyWithImpl<$Res>;
+abstract class _$$_RecordsCopyWith<$Res> implements $RecordsCopyWith<$Res> {
+  factory _$$_RecordsCopyWith(
+          _$_Records value, $Res Function(_$_Records) then) =
+      __$$_RecordsCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -513,10 +491,10 @@ abstract class _$$_RecordCopyWith<$Res> implements $RecordCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_RecordCopyWithImpl<$Res>
-    extends _$RecordCopyWithImpl<$Res, _$_Record>
-    implements _$$_RecordCopyWith<$Res> {
-  __$$_RecordCopyWithImpl(_$_Record _value, $Res Function(_$_Record) _then)
+class __$$_RecordsCopyWithImpl<$Res>
+    extends _$RecordsCopyWithImpl<$Res, _$_Records>
+    implements _$$_RecordsCopyWith<$Res> {
+  __$$_RecordsCopyWithImpl(_$_Records _value, $Res Function(_$_Records) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -539,7 +517,7 @@ class __$$_RecordCopyWithImpl<$Res>
     Object? appStore = freezed,
     Object? branches = freezed,
   }) {
-    return _then(_$_Record(
+    return _then(_$_Records(
       idx: freezed == idx
           ? _value.idx
           : idx // ignore: cast_nullable_to_non_nullable
@@ -609,9 +587,9 @@ class __$$_RecordCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
-class _$_Record implements _Record {
-  const _$_Record(
+
+class _$_Records implements _Records {
+  const _$_Records(
       {@JsonKey(name: 'idx') this.idx,
       @JsonKey(name: 'name') this.name,
       @JsonKey(name: 'short_name') this.shortName,
@@ -629,9 +607,6 @@ class _$_Record implements _Record {
       @JsonKey(name: 'app_store') this.appStore,
       @JsonKey(name: 'branches') final List<String>? branches})
       : _branches = branches;
-
-  factory _$_Record.fromJson(Map<String, dynamic> json) =>
-      _$$_RecordFromJson(json);
 
   @override
   @JsonKey(name: 'idx')
@@ -691,14 +666,14 @@ class _$_Record implements _Record {
 
   @override
   String toString() {
-    return 'Record(idx: $idx, name: $name, shortName: $shortName, logo: $logo, swiftCode: $swiftCode, hasCardpayment: $hasCardpayment, address: $address, ebankingUrl: $ebankingUrl, hasEbanking: $hasEbanking, hasMobileCheckout: $hasMobileCheckout, hasDirectWithdraw: $hasDirectWithdraw, hasNchl: $hasNchl, hasMobileBanking: $hasMobileBanking, playStore: $playStore, appStore: $appStore, branches: $branches)';
+    return 'Records(idx: $idx, name: $name, shortName: $shortName, logo: $logo, swiftCode: $swiftCode, hasCardpayment: $hasCardpayment, address: $address, ebankingUrl: $ebankingUrl, hasEbanking: $hasEbanking, hasMobileCheckout: $hasMobileCheckout, hasDirectWithdraw: $hasDirectWithdraw, hasNchl: $hasNchl, hasMobileBanking: $hasMobileBanking, playStore: $playStore, appStore: $appStore, branches: $branches)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Record &&
+            other is _$_Records &&
             (identical(other.idx, idx) || other.idx == idx) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.shortName, shortName) ||
@@ -727,7 +702,6 @@ class _$_Record implements _Record {
             const DeepCollectionEquality().equals(other._branches, _branches));
   }
 
-  @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(
       runtimeType,
@@ -751,19 +725,12 @@ class _$_Record implements _Record {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_RecordCopyWith<_$_Record> get copyWith =>
-      __$$_RecordCopyWithImpl<_$_Record>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$_RecordToJson(
-      this,
-    );
-  }
+  _$$_RecordsCopyWith<_$_Records> get copyWith =>
+      __$$_RecordsCopyWithImpl<_$_Records>(this, _$identity);
 }
 
-abstract class _Record implements Record {
-  const factory _Record(
+abstract class _Records implements Records {
+  const factory _Records(
       {@JsonKey(name: 'idx') final String? idx,
       @JsonKey(name: 'name') final String? name,
       @JsonKey(name: 'short_name') final String? shortName,
@@ -779,9 +746,7 @@ abstract class _Record implements Record {
       @JsonKey(name: 'has_mobile_banking') final bool? hasMobileBanking,
       @JsonKey(name: 'play_store') final String? playStore,
       @JsonKey(name: 'app_store') final String? appStore,
-      @JsonKey(name: 'branches') final List<String>? branches}) = _$_Record;
-
-  factory _Record.fromJson(Map<String, dynamic> json) = _$_Record.fromJson;
+      @JsonKey(name: 'branches') final List<String>? branches}) = _$_Records;
 
   @override
   @JsonKey(name: 'idx')
@@ -833,6 +798,6 @@ abstract class _Record implements Record {
   List<String>? get branches;
   @override
   @JsonKey(ignore: true)
-  _$$_RecordCopyWith<_$_Record> get copyWith =>
+  _$$_RecordsCopyWith<_$_Records> get copyWith =>
       throw _privateConstructorUsedError;
 }
