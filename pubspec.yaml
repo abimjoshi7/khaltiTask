@@ -20,7 +20,6 @@ dependencies:
   internet_connection_checker: ^1.0.0+1
   intl: ^0.18.0
   json_annotation: ^4.8.1
-  pigeon: ^10.1.4
   hydrated_bloc: ^9.1.2
 
 dev_dependencies:
@@ -32,6 +31,8 @@ dev_dependencies:
   json_serializable: ^6.7.1
   mocktail: ^0.3.0
   very_good_analysis: ^5.0.0
+  pigeon: ^10.1.4
+
 
 flutter:
   uses-material-design: true
