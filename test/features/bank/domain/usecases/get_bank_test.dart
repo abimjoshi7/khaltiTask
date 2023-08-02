@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:khaltitask/core/error/failures.dart';
-import 'package:khaltitask/features/bank/domain/entities/bank_res.dart';
+import 'package:khaltitask/features/bank/domain/entities/bank.dart';
 import 'package:khaltitask/features/bank/domain/repositories/bank_repository.dart';
 import 'package:khaltitask/features/bank/domain/usecases/get_bank.dart';
 import 'package:mocktail/mocktail.dart';
@@ -22,7 +22,7 @@ void main() {
     },
   );
 
-  const testRecord = Records();
+  const testRecord = BankRecord();
 
   test(
     'should return record from bank list',

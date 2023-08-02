@@ -17,10 +17,12 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype)init NS_UNAVAILABLE;
 + (instancetype)makeWithTitle:(NSString *)title
     body:(NSString *)body
-    email:(NSString *)email;
+    email:(NSString *)email
+    test:(NSNumber *)test;
 @property(nonatomic, copy) NSString * title;
 @property(nonatomic, copy) NSString * body;
 @property(nonatomic, copy) NSString * email;
+@property(nonatomic, strong) NSNumber * test;
 @end
 
 /// The codec used by MessageApi.

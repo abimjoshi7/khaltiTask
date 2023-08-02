@@ -5,10 +5,12 @@ class MyMessage {
   final String title;
   final String body;
   final String email;
+  final int test;
   MyMessage({
     required this.title,
     required this.body,
     required this.email,
+    required this.test,
   });
 }
 

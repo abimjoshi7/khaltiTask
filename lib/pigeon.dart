@@ -13,6 +13,7 @@ class MyMessage {
     required this.title,
     required this.body,
     required this.email,
+    required this.test,
   });
 
   String title;
@@ -21,11 +22,14 @@ class MyMessage {
 
   String email;
 
+  int test;
+
   Object encode() {
     return <Object?>[
       title,
       body,
       email,
+      test,
     ];
   }
 
@@ -35,6 +39,7 @@ class MyMessage {
       title: result[0]! as String,
       body: result[1]! as String,
       email: result[2]! as String,
+      test: result[3]! as int,
     );
   }
 }

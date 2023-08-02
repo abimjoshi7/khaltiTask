@@ -35,11 +35,13 @@ static id GetNullableObjectAtIndex(NSArray *array, NSInteger key) {
 @implementation MyMessage
 + (instancetype)makeWithTitle:(NSString *)title
     body:(NSString *)body
-    email:(NSString *)email {
+    email:(NSString *)email
+    test:(NSNumber *)test {
   MyMessage* pigeonResult = [[MyMessage alloc] init];
   pigeonResult.title = title;
   pigeonResult.body = body;
   pigeonResult.email = email;
+  pigeonResult.test = test;
   return pigeonResult;
 }
 + (MyMessage *)fromList:(NSArray *)list {
@@ -50,6 +52,8 @@ static id GetNullableObjectAtIndex(NSArray *array, NSInteger key) {
   NSAssert(pigeonResult.body != nil, @"");
   pigeonResult.email = GetNullableObjectAtIndex(list, 2);
   NSAssert(pigeonResult.email != nil, @"");
+  pigeonResult.test = GetNullableObjectAtIndex(list, 3);
+  NSAssert(pigeonResult.test != nil, @"");
   return pigeonResult;
 }
 + (nullable MyMessage *)nullableFromList:(NSArray *)list {
@@ -60,6 +64,7 @@ static id GetNullableObjectAtIndex(NSArray *array, NSInteger key) {
     (self.title ?: [NSNull null]),
     (self.body ?: [NSNull null]),
     (self.email ?: [NSNull null]),
+    (self.test ?: [NSNull null]),
   ];
 }
 @end

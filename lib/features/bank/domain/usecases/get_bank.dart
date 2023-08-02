@@ -3,19 +3,19 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 
 import 'package:khaltitask/core/error/failures.dart';
 import 'package:khaltitask/core/usecases/usecase.dart';
-import 'package:khaltitask/features/bank/domain/entities/bank_res.dart';
+import 'package:khaltitask/features/bank/domain/entities/bank.dart';
 import 'package:khaltitask/features/bank/domain/repositories/bank_repository.dart';
 
 part 'get_bank.freezed.dart';
 part 'get_bank.g.dart';
 
-class GetBank with Usecase<Records, BankParams> {
+class GetBank with Usecase<BankRecord, BankParams> {
   GetBank(this._repository);
 
   final BankRepository _repository;
 
   @override
-  Future<(Failure?, Records)> call(BankParams p) => _repository.getBank(
+  Future<(Failure?, BankRecord)> call(BankParams p) => _repository.getBank(
         p,
       );
 }

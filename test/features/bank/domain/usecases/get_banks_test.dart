@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:khaltitask/core/usecases/usecase.dart';
-import 'package:khaltitask/features/bank/domain/entities/bank_res.dart';
+import 'package:khaltitask/features/bank/domain/entities/bank.dart';
 import 'package:khaltitask/features/bank/domain/repositories/bank_repository.dart';
 import 'package:khaltitask/features/bank/domain/usecases/get_banks.dart';
 import 'package:mocktail/mocktail.dart';
@@ -18,7 +18,7 @@ void main() {
     },
   );
 
-  const testBankList = BankRes();
+  const testBankList = BankRecords();
 
   test(
     'should retrieve list of banks with no failures',
